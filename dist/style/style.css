@@ -1,0 +1,242 @@
+body{
+    background-color: #ee8572;
+}
+
+/*
+the header title
+*/
+
+#header-container{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    height: auto;
+}
+
+#header-container > p >a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: #000;
+    text-decoration: unset;
+}
+
+/*
+the left side projects container
+*/
+#porjects-container{
+    background-color: #35495e;
+    min-width: 25%;
+    min-height:642px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #000;
+}
+
+#porjects-container > p{
+    color: #35495e;
+    background-color: #63b7af;
+    width: 40%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    margin: auto;
+    text-align: center;
+    padding: 6px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#add-project-form-button{
+    position: absolute;
+    top: 15px;
+    border: none;
+    background-color: #35495e;
+    font-size: 30px;
+    color: #ee8572;
+    font-weight: 900;
+}
+#add-project-form-button:focus{
+    box-shadow: none;
+}
+
+.table td {
+    color: rgb(252, 225, 184);
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #63b7af;
+    border-bottom: 1px solid #63b7af;
+}
+.delete-button{
+    font-size: 17px;
+    text-align: right;
+    width: 5px;
+}
+.delete-button > i:hover{
+    color: #dc3545;
+    cursor: pointer;
+}
+.project-icon{
+    width: 5px;
+    margin-right: -5px;
+    text-shadow: 0px -4px 6px wheat;
+}
+.project-icon > i{
+    font-size: 25px;
+    vertical-align: middle;
+}  
+.project-name{
+    font-size: 20px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+.project-item:hover{
+    cursor: pointer;
+}
+
+/*
+add new project form
+*/
+#add-project-button{
+    background-color: #63b7af;
+    border: #63b7af;
+}
+
+/*
+Selected project info
+*/
+#selected-project{
+    border-top: 1px solid black;
+    margin-bottom: 20px;
+}
+#selected-project-name{
+    float: left;
+    color: #35495e;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    padding: 6px;
+    margin-left: 30px;
+    border-radius: 10px;
+    min-width: 250px;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#add-todo-form-button{
+    float: right;
+    margin-right: 50px;
+    border: none;
+    background-color:unset;
+    font-size: 35px;
+    color:#35495e;
+    font-weight: 900;
+}
+#add-todo-form-button:focus{
+    box-shadow: none;
+}
+#add-todo-form-button:hover{
+    color: #21374e;
+}
+
+/*
+add new todo form
+*/
+#add-todo-button{
+    background-color: #63b7af;
+    border: #63b7af;
+}
+
+#todo-date{
+    display: inline-block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color:#495057;
+    vertical-align: middle;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+    font-family: inherit;
+    pointer-events: auto;
+    text-align: left;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+#todo-date:focus{
+    border-color:#80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+
+
+/*
+Todo items body
+*/
+.card-header a {
+    color: wheat;
+    font-size: 28px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    float: left;
+    margin-left: 45px;
+    margin-bottom: -35px;
+}
+
+.card-header i{
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+#todo-done{
+    font-size: 25px;
+}
+#todo-done:hover{
+    color: #0b1118;
+}
+#todo-label{
+    color: rgb(255, 60, 0);
+    font-size: 25px;
+}
+
+.collapse, .collapsing{
+    color: 35495e;
+    background-color: #63b7af;
+    border-radius: 0 0 5px 5px;
+}
+.card-header{
+    background-color: #35495e;
+}
+.card{
+    background-color: unset;
+    box-shadow: 0px 7px 10px #000;
+    width: 75%;
+    margin: auto;
+}
+
+#edit-row{
+    float: right;
+    top: 0;
+}
+
+#done-row{
+    float: left;
+}
+#todo-edit{
+    color: #000;
+    font-size: 25px;
+    margin-right: 15px;
+}
+#todo-delete{
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+#todo-delete:hover{
+   color: #dc3545;
+}
+
+
