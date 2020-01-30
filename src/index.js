@@ -42,6 +42,8 @@ function renderCurrentProjects() {
     render.renderProjects();
 
     document.getElementById('project-input-name').value = "";
+
+    $('.modal').modal('hide')
 }
 
 
@@ -59,6 +61,7 @@ function addNewTodo() {
     document.getElementById('todo-input-description').value = "";
     document.getElementById('todo-date').value = "";
     document.getElementById('priority').value = "";
+    $('.modal').modal('hide')
 }
 
 
