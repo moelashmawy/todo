@@ -22,6 +22,32 @@ the header title
 }
 
 /*
+* header social media
+*/
+#s-media{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+
+#s-media i{
+    font-size: 30px;
+    color: black;
+    margin-right: 10px;
+}
+.fab:hover{
+     animation: shake 0.5s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+@keyframes shake {
+    0% { transform: translate(0px, -2px) rotate(0deg); }
+}
+
+/*
 the left side projects container
 */
 #porjects-container{
@@ -92,6 +118,10 @@ the left side projects container
 }
 .project-item:hover{
     cursor: pointer;
+    background-color: rgba(238, 133, 114, 0.1) !important;
+}
+.project-item:hover .project-icon{
+    text-shadow: 0px -4px 6px #ee8572 !important;
 }
 
 /*
@@ -179,11 +209,21 @@ Todo items body
 */
 .card-header a {
     color: wheat;
-    font-size: 28px;
+    font-size: 27px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     float: left;
     margin-left: 45px;
     margin-bottom: -35px;
+    width: 58%;
+}
+
+#todo-item-date{
+    color: wheat;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: auto;
+    float: left;
+    margin-bottom: -5px;
+    margin-top: 5px;
 }
 
 .card-header i{
@@ -193,10 +233,12 @@ Todo items body
 
 #todo-done{
     font-size: 25px;
+    transition: color 5s;
 }
-#todo-done:hover{
-    color: #0b1118;
-}
+
+/* #todo-done:hover{
+    color: #fff;
+} */
 #todo-label{
     color: rgb(255, 60, 0);
     font-size: 25px;
@@ -206,6 +248,7 @@ Todo items body
     color: 35495e;
     background-color: #63b7af;
     border-radius: 0 0 5px 5px;
+    
 }
 .card-header{
     background-color: #35495e;

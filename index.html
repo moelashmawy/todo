@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <title>TODO</title>
     <link rel="stylesheet" href="style/bootstrap.css">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
-    <link rel="stylesheet" href="style/icon.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -44,11 +43,17 @@
                     <p><a href="index.html">ToDÔoÔ</a></p>
                 </div>
 
+                <!--The header social media icons-->
+                <div id="s-media">
+                    <a href="https://www.github.com/hamohuh/"><i class='fab fa-github'></i></a>
+                    <a href="https://www.twitter.com/hamohuh/"><i class='fab fa-twitter'></i></a>
+                </div>
+
 
                 <!--The Todo items container-->
                 <div id="todo-container">
                     <div id="selected-project">
-                        <p id="selected-project-name">Test my first ToDo</p>
+                        <p id="selected-project-name">The selected Project name</p>
                         <button id="add-todo-form-button" type="button" class="btn btn-primary" data-toggle="modal"
                             data-target="#todo-form">+</button>
                     </div>
@@ -58,7 +63,7 @@
 
                         <div id="accordion">
 
-                            <!-- todo Item Card 1 -->
+                            <!-- todo Item Card model -->
                             <!--
                             <div class="card">
                                 <div class="card-header">
@@ -75,6 +80,7 @@
                                     <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
                                         <p>The ToDo Title</p>
                                     </a>
+                                    <p id="todo-item-date">20/08/1994</p>
 
                                     <div id="edit-row" class="row">
                                         <div id="todo-edit" class=".col-auto">
@@ -113,7 +119,7 @@
                 <div class="modal-content">
 
                     <div class="modal-header">
-                        <h4 class="modal-title">Add New Proect</h4>
+                        <h4 class="modal-title">Add New Project</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
@@ -148,9 +154,11 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Name:</label>
-                            <input type="text" class="form-control" id="todo-input-name" value="">
+                            <input type="text" class="form-control" id="todo-input-name" value=""
+                                placeholder="Todo Name">
                             <label>Description:</label>
-                            <input type="text" class="form-control" id="todo-input-description" value="">
+                            <input type="text" class="form-control" id="todo-input-description" value=""
+                                placeholder="Todo Description">
                             <label>Due:</label>
                             <input id="todo-date" type="date">
                             <label>Priority:</label>
@@ -173,12 +181,10 @@
 
     </div>
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-    <script src="jquery.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
-    <script src="popper.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
-    <script src="bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
 </body>
 
