@@ -43,7 +43,11 @@ function renderCurrentProjects() {
 
     document.getElementById('project-input-name').value = "";
 
+    //hide the form after clicking the button
     $('.modal').modal('hide')
+
+    //this function call to control todo items toggling
+    render.toggleTodo();
 }
 
 
@@ -61,7 +65,10 @@ function addNewTodo() {
     document.getElementById('todo-input-description').value = "";
     document.getElementById('todo-date').value = "";
     document.getElementById('priority').value = "";
+    //hide the form after clicking the button
     $('.modal').modal('hide')
+    //this function call to control todo items toggling
+    render.toggleTodo();
 }
 
 
