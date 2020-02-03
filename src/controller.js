@@ -198,7 +198,7 @@ const RenderProject = () => {
             /**
              *check the periority value and set the label color depends on the value
              */
-            function checkPriority() {
+            const checkPriority = () => {
                 if (projectsArray[index].todos[i].priority == "Normal") {
                     labelIcon.style.color = "#00c41f";
                 } else if (projectsArray[index].todos[i].priority == "Medium") {
@@ -221,7 +221,7 @@ const RenderProject = () => {
             /**
              * change the color of the done icon when the todo is done
              */
-            function changeStateColor() {
+            const changeStateColor = () => {
                 if (projectsArray[index].todos[i].isDone == true) {
                     doneIcon.style.color = "#1fb462"
                 }
@@ -230,11 +230,12 @@ const RenderProject = () => {
             /**
              * delete Todo item
              */
-            function deleteTodo() {
+            const deleteTodo = () => {
                 deleteIcon.addEventListener('click', () => {
                     projectsArray[index].todos.splice(i, 1);
                     clearTodosListUi();
                     renderTodo(index);
+                    toggleTodo();
                 })
             }
 

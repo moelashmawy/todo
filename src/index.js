@@ -26,12 +26,11 @@ document.getElementById('projects-body').addEventListener('click', function (e) 
     }
 })
 
-
 /**
  * this function render the projects from the objects array
  * once the user add new project and click add button
  */
-function renderCurrentProjects() {
+const renderCurrentProjects = function () {
 
     render.clearProjectsListUi();
 
@@ -51,11 +50,12 @@ function renderCurrentProjects() {
 }
 
 
+
 /**
  * this function adds a new Todo to a specific proect's todos array
  * at a specific index
  */
-function addNewTodo() {
+const addNewTodo = function () {
     let selectedProjName = document.getElementById('selected-project-name');
     let index = selectedProjName.getAttribute('selected-name-index');
     render.addTodo(index);
