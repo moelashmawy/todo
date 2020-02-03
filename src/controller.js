@@ -1,8 +1,11 @@
 import { Todo } from "./todo";
 import { Project } from "./project";
 
-//this function to hold the projects objects
-let projectsArray = [];
+//get the projects from localStorage
+let storedProjects = localStorage.getItem("projects");
+
+//check if there is something in the localStorage, if not make it an empty array
+let projectsArray = (storedProjects) ? JSON.parse(storedProjects) : [];
 
 /**
  * this is out main function which is responsible for rendering,
@@ -17,6 +20,8 @@ const RenderProject = () => {
     const addProject = (name) => {
         let newProject = Project(name);
         projectsArray.push(newProject);
+
+        localStorage.setItem('projects', JSON.stringify(projectsArray));
     }
 
     /**
@@ -25,8 +30,12 @@ const RenderProject = () => {
      */
     const deleteProject = (index) => {
         projectsArray.splice(index, 1);
+        localStorage.setItem('projects', JSON.stringify(projectsArray));
         clearProjectsListUi();
+        clearTodosListUi();
         renderProjects();
+
+        document.getElementById('selected-project-name').innerHTML = 'Select an Existing project';
     }
 
     /**
@@ -84,6 +93,8 @@ const RenderProject = () => {
 
         let newTodo = Todo(todoName, todoDescription, todoDue, priority, isDone);
         projectsArray[index].todos.push(newTodo);
+
+        localStorage.setItem('projects', JSON.stringify(projectsArray));
     }
 
 
@@ -195,6 +206,8 @@ const RenderProject = () => {
             let cardsContainer = document.getElementById('accordion');
             cardsContainer.appendChild(card);
 
+            toggleTodo()
+
             /**
              *check the periority value and set the label color depends on the value
              */
@@ -206,6 +219,7 @@ const RenderProject = () => {
                 } else if (projectsArray[index].todos[i].priority == "Importnat") {
                     labelIcon.style.color = "red";
                 }
+                localStorage.setItem('projects', JSON.stringify(projectsArray));
             }
 
             /**
@@ -214,7 +228,8 @@ const RenderProject = () => {
             function changeTodoState() {
                 doneIcon.addEventListener('click', () => {
                     projectsArray[index].todos[i].isDone = true;
-                    changeStateColor()
+                    localStorage.setItem('projects', JSON.stringify(projectsArray));
+                    changeStateColor();
                 })
             }
 
@@ -223,7 +238,8 @@ const RenderProject = () => {
              */
             const changeStateColor = () => {
                 if (projectsArray[index].todos[i].isDone == true) {
-                    doneIcon.style.color = "#1fb462"
+                    doneIcon.style.color = "#1fb462";
+                    localStorage.setItem('projects', JSON.stringify(projectsArray));
                 }
             }
 
@@ -233,9 +249,9 @@ const RenderProject = () => {
             const deleteTodo = () => {
                 deleteIcon.addEventListener('click', () => {
                     projectsArray[index].todos.splice(i, 1);
+                    localStorage.setItem('projects', JSON.stringify(projectsArray));
                     clearTodosListUi();
                     renderTodo(index);
-                    toggleTodo();
                 })
             }
 
@@ -305,7 +321,8 @@ export { RenderProject }
  */
 const render = RenderProject();
 
-render.addProject("Tutorial");
+//adding the first element manually
+projectsArray[0] = { name: 'Tutorial', todos: [] };
 
 //todos objects for my tutorial demo to push manually 
 let tutotialTodo1 = Todo("Add project", "You can add a new project by clicking '+' next to My projects on the left top and type the project name then press 'Add' ", "2020-01-30", "Normal", true);
